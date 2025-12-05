@@ -1,0 +1,5 @@
+{
+  "name": "Facilita Payment Control",
+  "description": "A comprehensive dashboard for reconciling 'Facilita' platform payments against internal CTE controls, categorizing Rota, Puxada, and ISS with AI-assisted data cleaning.",
+  "requestFramePermissions": []
+}
