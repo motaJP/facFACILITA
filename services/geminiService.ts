@@ -2,7 +2,12 @@ import { GoogleGenAI } from "@google/genai";
 
 // Helper to safely get the API key
 const getApiKey = (): string | undefined => {
-  return process.env.API_KEY;
+  // Safe check for process.env in case polyfill fails or build replacement misses
+  try {
+    return process.env.API_KEY;
+  } catch (e) {
+    return undefined;
+  }
 };
 
 export const analyzeDiscrepancy = async (

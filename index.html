@@ -12,7 +12,12 @@
         background-color: #f3f4f6;
       }
     </style>
-<script type="importmap">
+    <!-- Polyfill for libraries relying on Node.js globals -->
+    <script>
+      window.global = window;
+      window.process = { env: {} };
+    </script>
+  <script type="importmap">
 {
   "imports": {
     "react": "https://aistudiocdn.com/react@^19.2.1",
